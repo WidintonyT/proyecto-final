@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CanchaTec - Iniciar Sesión</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/canchaTec/src/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><i class="fas fa-futbol me-2"></i>CanchaTec</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/canchaTec/src/app/home/home.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#funciones">Funciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#canchas">Canchas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Creadores.html">Creadores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="Login.html">Acceso</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="auth-page-section">
+      <div class="container-fluid">
+        <div class="row min-vh-100">
+          <!-- Login Form Column -->
+          <div
+            class="col-lg-6 d-flex align-items-center justify-content-center order-2 order-lg-1"
+          >
+            <div class="auth-form-container w-100">
+              <div class="text-center mb-5">
+                <i class="fas fa-sign-in-alt auth-page-icon"></i>
+                <h2 class="auth-page-title">Iniciar Sesión</h2>
+                <p class="auth-page-subtitle">
+                  Accede a tu cuenta de CanchaTec
+                </p>
+              </div>
+
+              <form id="loginForm" class="auth-form">
+                <div class="mb-4">
+                  <label for="loginEmail" class="form-label">
+                    <i class="fas fa-envelope me-2"></i>Correo Electrónico
+                  </label>
+                  <input
+                    type="email"
+                    class="form-control auth-input"
+                    id="loginEmail"
+                    placeholder="usuario@ejemplo.com"
+                    required
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label for="loginPassword" class="form-label">
+                    <i class="fas fa-lock me-2"></i>Contraseña
+                  </label>
+                  <input
+                    type="password"
+                    class="form-control auth-input"
+                    id="loginPassword"
+                    placeholder="••••••••"
+                    required
+                  />
+                </div>
+
+                <div class="mb-4 form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="rememberMe"
+                  />
+                  <label class="form-check-label text-light" for="rememberMe">
+                    Recordarme
+                  </label>
+                </div>
+
+                <div class="d-grid mb-4">
+                  <button type="submit" class="btn btn-gold btn-auth">
+                    <i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión
+                  </button>
+                </div>
+
+                <div class="text-center">
+                  <p class="text-light mb-2">¿No tienes una cuenta?</p>
+                  <a [routerLink]="['/register']" class="btn btn-outline-gold">
+                    <i class="fas fa-user-plus me-2"></i>Crear Cuenta
+                  </a>
+                </div>
+
+                <div class="text-center mt-3">
+                  <a href="#" class="text-gold small"
+                    >¿Olvidaste tu contraseña?</a
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Image Column -->
+          <div class="col-lg-6 auth-image-container order-1 order-lg-2">
+            <div class="auth-image-overlay">
+              <div class="auth-image-content">
+                <h3 class="text-white mb-3">¡Bienvenido de Nuevo!</h3>
+                <p class="text-light">
+                  Gestiona tus reservas de canchas deportivas de manera fácil y
+                  eficiente. Tu experiencia deportiva comienza aquí.
+                </p>
+                <div class="auth-features">
+                  <div class="auth-feature-item">
+                    <i class="fas fa-check-circle me-2"></i>
+                    <span>Reservas en tiempo real</span>
+                  </div>
+                  <div class="auth-feature-item">
+                    <i class="fas fa-check-circle me-2"></i>
+                    <span>Gestión de horarios</span>
+                  </div>
+                  <div class="auth-feature-item">
+                    <i class="fas fa-check-circle me-2"></i>
+                    <span>Múltiples deportes</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

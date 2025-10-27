@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CanchaTec - Gestión de Canchas Sintéticas de Microfútbol</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/canchaTec/src/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" [routerLink]="['/home']"
+          ><i class="fas fa-futbol me-2"></i>CanchaTec</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/home']" fragment="inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/home']" fragment="funciones">Funciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/home']" fragment="canchas">Canchas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/creators']">Creadores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/login']">Acceso</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+      <div class="container text-center">
+        <div class="specialty-badge">
+          <i class="fas fa-star me-2"></i>Especialistas en Microfútbol
+        </div>
+        <h1 class="hero-title">CanchaTec</h1>
+        <p class="hero-subtitle">
+          Sistema Especializado de Gestión para Canchas Sintéticas de Microfútbol
+        </p>
+        <p class="lead mb-4">
+          Administra, reserva y gestiona tus canchas de microfútbol con césped sintético de alta
+          calidad
+        </p>
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+          <button class="btn btn-gold btn-lg" (click)="goToLogin()">
+            <i class="fas fa-play me-2"></i>Comenzar Ahora
+          </button>
+          <a href="#funciones" class="btn btn-outline-light btn-lg">
+            <i class="fas fa-info-circle me-2"></i>Ver Servicios
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-3" *ngFor="let stat of stats">
+            <div class="stat-item">
+              <div class="stat-number">{{ stat.number }}</div>
+              <div class="stat-label">{{ stat.label }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="funciones" class="py-5">
+      <div class="container text-center">
+        <h2 class="section-title">Servicios Especializados</h2>
+        <div class="row">
+          <div class="col-md-4" *ngFor="let feature of features">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas {{ feature.icon }}"></i>
+              </div>
+              <h4 class="feature-title">{{ feature.title }}</h4>
+              <p>{{ feature.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courts Gallery Section -->
+    <section id="canchas" class="py-5">
+      <div class="container text-center">
+        <h2 class="section-title">Nuestras Canchas de Microfútbol</h2>
+        <div class="row court-gallery">
+          <div class="col-md-4" *ngFor="let court of courts">
+            <div class="court-image">
+              <div class="court-placeholder">
+                <i class="fas {{ court.icon }}"></i>
+              </div>
+              <h5 style="color: var(--primary-gold)">{{ court.name }}</h5>
+              <p class="text-muted">{{ court.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container text-center">
+        <p class="mb-2">&copy; 2025 CanchaTec. Todos los derechos reservados.</p>
+        <p class="mb-0">Sistema especializado en gestión de canchas sintéticas de microfútbol</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

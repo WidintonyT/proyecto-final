@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creadores - SportsCourt</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/canchaTec/src/styles.css" />
+  </head>
+  <body>
+    <!-- Back Button -->
+    <button class="back-btn" onclick="window.history.back()" title="Volver">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" [routerLink]="['/home']"
+          ><i class="fas fa-futbol me-2"></i>CanchaTec</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/home']" fragment="inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/home']" fragment="funciones">Funciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/home']" fragment="canchas">Canchas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/creators']">Creadores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/login']">Acceso</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1 class="hero-title"><i class="fas fa-users me-3"></i>Nuestro Equipo</h1>
+        <p class="hero-subtitle">Conoce a los desarrolladores detrás de CanchaTec</p>
+      </div>
+    </section>
+
+    <!-- Creators Section -->
+    <section class="creators-section">
+      <div class="container">
+        <h2 class="section-title">Los Creadores</h2>
+        <div class="row">
+          <!-- Steven Velasquez -->
+          <div class="col-lg-6 col-xl-3 mb-4">
+            <div class="creator-card">
+              <div class="creator-avatar">SV</div>
+              <h3 class="creator-name">Steven Velásquez</h3>
+              <p class="creator-role">Estudiante de Ingeniera de sistemas</p>
+              <p class="text-light">
+                Jugador de Minecraft profecional, experto en el pvp del free.
+              </p>
+              <div class="creator-skills">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">java</span>
+                <span class="skill-tag">htmsl</span>
+              </div>
+              <div class="creator-social">
+                <a href="#" class="social-link" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-link" title="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-link" title="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Jairon Pizarro -->
+          <div class="col-lg-6 col-xl-3 mb-4">
+            <div class="creator-card">
+              <div class="creator-avatar">JP</div>
+              <h3 class="creator-name">Jairon Pizarro</h3>
+              <p class="creator-role">Estudiante de Ingeniera de sistemas</p>
+              <p class="text-light">Experto jugador de chaza, musico por hobbie.</p>
+              <div class="creator-skills">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">java</span>
+                <span class="skill-tag">htmsl</span>
+              </div>
+              <div class="creator-social">
+                <a href="#" class="social-link" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-link" title="Behance">
+                  <i class="fab fa-behance"></i>
+                </a>
+                <a href="#" class="social-link" title="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Widinton Tainbut -->
+          <div class="col-lg-6 col-xl-3 mb-4">
+            <div class="creator-card">
+              <div class="creator-avatar">WT</div>
+              <h3 class="creator-name">Widinton Tainbut</h3>
+              <p class="creator-role">Estudiante de Ingeniera de sistemas</p>
+              <p class="text-light">Jugador veterano de la dos tiros, ingeniero de corazon.</p>
+              <div class="creator-skills">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">java</span>
+                <span class="skill-tag">htmsl</span>
+              </div>
+              <div class="creator-social">
+                <a href="#" class="social-link" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-link" title="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-link" title="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="text-center" id="contact">
+          <h3 class="mb-4" style="color: var(--primary-gold)">¿Quieres contactarnos?</h3>
+          <p class="lead text-light">
+            Estamos disponibles para colaboraciones y consultas técnicas
+          </p>
+          <div class="mt-4">
+            <a
+              href="mailto:team@sportscourt.com"
+              class="btn btn-lg me-3"
+              style="
+                background: linear-gradient(45deg, #ffd700, #ffa500);
+                border: none;
+                color: #1a1a1a;
+                font-weight: bold;
+                padding: 12px 30px;
+                border-radius: 25px;
+              "
+            >
+              <i class="fas fa-envelope me-2"></i>Enviar Email
+            </a>
+            <a href="index.html" class="btn btn-outline-light btn-lg">
+              <i class="fas fa-home me-2"></i>Volver al Inicio
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
